@@ -65,6 +65,10 @@
     e.preventDefault();
     birdFly();
   });
+  startScreen.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    birdFly();
+  });
 
     // Starting the game
     startBtn.addEventListener('click', () => {
