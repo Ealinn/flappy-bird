@@ -4,10 +4,6 @@
   font-weight: normal;
   font-display: swap;
 }
-
-* {
-  box-sizing: border-box;
-}
 html, 
 body {
   margin: 0;
@@ -28,6 +24,24 @@ body {
   width: 288px;
   height: 512px;
   border: 1px solid grey;
+}
+.game-rules {
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.7;
+  opacity: 1;
+  visibility: visible;
+}
+.animate-game-rules {
+  -webkit-animation: animateRules 2s forwards;
+          animation: animateRules 2s forwards;
 }
 .start-screen {
   background-image: url(../images/flappy_bird_bg.png);
@@ -64,9 +78,9 @@ body {
 .total-score {
   margin: 0;
   margin-top: 25px;
-  font-family: Verdana;
+  font-family: 'Press Start 2P', cursive;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   color: #000;
 }
 .disable-dbl-tap-zoom {
@@ -93,5 +107,35 @@ body {
   }
   to {
     transform: scale(1);
+  }
+}
+
+@-webkit-keyframes animateRules {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  50% {
+    opacity: 0.5;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes animateRules {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  50% {
+    opacity: 0.5;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
   }
 }

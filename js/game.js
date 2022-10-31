@@ -12,8 +12,9 @@
     const startBtn = document.querySelector('.start-btn');
     const startScreen = document.querySelector('.start-screen');
     const totalScore = document.querySelector('.total-score').children[0];
+    const gameRules = document.querySelector('.game-rules');
+    let isStartGame = false;
     
-
     // Images
     let bird = new Image();
     let bg = new Image();
@@ -56,8 +57,9 @@
       fly.play();
       birdPosY -= 36;
     }
+
     document.addEventListener("keydown", (e) => {
-      if (e.code === "Space") {
+      if (e.code === "Space" && isStartGame) {
         birdFly();
       }
     });
@@ -69,7 +71,10 @@
     // Starting the game
     startBtn.addEventListener('click', () => {
       startScreen.style.display = 'none';
+      gameRules.classList.add('animate-game-rules');
+
       animationId = requestAnimationFrame(game);
+      isStartGame = true;
     })
 
     let game = () => {
@@ -142,6 +147,9 @@
 
       totalScore.textContent = score;
       startScreen.style.display = 'flex';
+      gameRules.classList.remove('animate-game-rules');
+
+      isStartGame = false;
 
       score = 0;
     }
