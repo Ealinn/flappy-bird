@@ -67,7 +67,6 @@
   });
   startScreen.addEventListener("touchstart", (e) => {
     e.preventDefault();
-    birdFly();
   });
 
     // Starting the game
