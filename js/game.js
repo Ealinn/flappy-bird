@@ -51,23 +51,20 @@
       y: 0
     }
 
-  // Bird flying - by pressing any key on a keyboard
-  let birdFly = () => {
-    fly.play();
-    birdPosY -= 36;
-  }
-  document.addEventListener("keydown", (e) => {
-    if (e.code === "Space") {
-      birdFly();
+    // Bird flying - by pressing any key on a keyboard
+    let birdFly = () => {
+      fly.play();
+      birdPosY -= 36;
     }
-  });
-  canvas.addEventListener("touchstart", (e) => {
-    e.preventDefault();
-    birdFly();
-  });
-  startScreen.addEventListener("touchstart", (e) => {
-    e.preventDefault();
-  });
+    document.addEventListener("keydown", (e) => {
+      if (e.code === "Space") {
+        birdFly();
+      }
+    });
+    canvas.addEventListener("touchstart", (e) => {
+      e.preventDefault();
+      birdFly();
+    });
 
     // Starting the game
     startBtn.addEventListener('click', () => {
