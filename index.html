@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Flappy Bird</title>
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="container disable-dbl-tap-zoom">
-    <div class="game-wrapper">
-      <canvas class="game-field" id="bird-game" width="288" height="512"></canvas>
-      <div class="start-screen">
+    <div class="game-wrapper disable-dbl-tap-zoom">
+      <canvas class="game-field disable-dbl-tap-zoom" id="bird-game" width="288" height="512"></canvas>
+      <div class="start-screen disable-dbl-tap-zoom">
         <button class="start-btn">Start Game</button>
         <p class="total-score">Total score: <span>0</span></p>
       </div>
