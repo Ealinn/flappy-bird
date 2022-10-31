@@ -61,7 +61,10 @@
       birdFly();
     }
   });
-  canvas.addEventListener("touchstart", birdFly);
+  canvas.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    birdFly();
+  });
 
     // Starting the game
     startBtn.addEventListener('click', () => {
