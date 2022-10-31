@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url("../fonts/Press_Start_2P/PressStart2P-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+html, 
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-wrapper {
+  position: relative;
+  width: 288px;
+  height: 512px;
+  border: 1px solid grey;
+}
+.start-screen {
+  background-image: url(../images/flappy_bird_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #70c5ce;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+.start-btn {
+  padding: 15px 20px;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  background-color: #82e38c;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+  letter-spacing: -1px;
+  cursor: pointer;
+
+  -webkit-animation: btnScale 1s infinite;
+          animation: btnScale 1s infinite;
+}
+.total-score {
+  margin: 0;
+  margin-top: 25px;
+  font-family: Verdana;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+@-webkit-keyframes btnScale {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes btnScale {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
