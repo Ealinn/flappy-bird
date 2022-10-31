@@ -69,7 +69,9 @@ body {
   font-size: 18px;
   color: #000;
 }
-
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
+}
 @-webkit-keyframes btnScale {
   from {
     transform: scale(1);
